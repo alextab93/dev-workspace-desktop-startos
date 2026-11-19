@@ -71,6 +71,10 @@ Run **Workspace Connection Status** if a connection fails. A missing address ret
 
 **Forget Workspace Connection** disables the local target and retains its key. To revoke future logins, also remove that public fingerprint through Dev Workspace's **Remove SSH Key**. **Rotate Workspace Key** creates a replacement: authorize its new public key, remove the old fingerprint in Dev Workspace, then connect again. These actions restart this desktop. Existing authenticated sessions require separate termination.
 
+### When typing feels slow
+
+Try resizing the browser window to about 1100 by 760 pixels. In a Brave typing test on x86 StartOS 0.4.2, that size reduced the time between a keystroke and its visible response compared with a 1440 by 1000 window. The smaller desktop also used less streaming-process CPU. Enlarge the window again whenever you need the space. Both sizes use the existing software renderer.
+
 ## Dev Containers
 
 Enable Podman in Dev Workspace and install Microsoft's **Dev Containers** extension in this desktop. Open a local-storage project through Remote SSH, add its `.devcontainer/devcontainer.json`, and run **Dev Containers: Reopen in Container**. The workspace supplies the `docker` compatibility command and `podman-compose`, so the tested Node/Compose workflow needs no container engine in this desktop or on your computer.
