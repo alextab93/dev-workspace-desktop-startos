@@ -1,0 +1,30 @@
+Connect this desktop to Dev Workspace
+
+1. In this service's StartOS Actions, run Prepare Workspace Key.
+2. Add the displayed public key in Dev Workspace using Add SSH Key.
+3. Copy Dev Workspace's Ed25519 SHA256 host fingerprint from Connection Information.
+4. Return to this companion and run Connect to Dev Workspace. Choose Local Projects
+   for container workloads, or Shared Projects for your configured shared files.
+5. In this editor's Extensions view, install Remote - SSH by Microsoft.
+6. Open the Command Palette, choose Remote-SSH: Connect to Host, and select
+   dev-workspace. Open /home/dev/projects or /projects-shared on that remote host.
+
+After the extension is installed, the next desktop start opens the paired remote
+folder automatically. If the workspace is offline, start it and run Workspace
+Connection Status. Reconnect to dev-workspace from the editor when it is available.
+
+The editor must show an SSH connection to dev-workspace before you run project
+commands. That window uses Dev Workspace's terminals, language tools and Podman.
+Local desktop folders use this companion's environment instead. Container projects
+belong in /home/dev/projects; shared provider files remain in /projects-shared.
+
+Open application Web Preview links in your own browser. A localhost URL inside
+this streamed desktop belongs to the desktop, not to your computer.
+
+Pairing does not enroll a StartOS administration or Git identity. Keep those
+credentials separate. Never copy your computer's private SSH keys into this desktop.
+
+Forget Workspace Connection disables this target but retains its dedicated key.
+To revoke future logins, remove the displayed public fingerprint in Dev Workspace.
+Already authenticated sessions require separate termination. Rotate Workspace Key
+creates a replacement that must be authorized before connecting again.

@@ -1,0 +1,16 @@
+{
+  "x64": {
+    "architecture": "x64",
+    "version": "1.145.3",
+    "commit": "dcd3ad6e368fbe19d03f37054a40dbaf40d676f4",
+    "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/dcd3ad6e368fbe19d03f37054a40dbaf40d676f4/code-stable-x64-1794015051.tar.gz",
+    "sha256": "567e067c3ce043605af1b466e916173193100cf8c7da911b85e4c5c0869fe621"
+  },
+  "arm64": {
+    "architecture": "arm64",
+    "version": "1.145.3",
+    "commit": "dcd3ad6e368fbe19d03f37054a40dbaf40d676f4",
+    "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/dcd3ad6e368fbe19d03f37054a40dbaf40d676f4/code-stable-arm64-1794014945.tar.gz",
+    "sha256": "1fe639e74fb6eb64a081fafe352dbf978c9fe4f2b324822c5ee0d335b72ad961"
+  }
+}

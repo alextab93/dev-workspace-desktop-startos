@@ -1,0 +1,5 @@
+export { main } from '../startos/main'
+export { setInterfaces } from '../startos/interfaces'
+export { watchDesktopSetup } from '../startos/init/setup'
+export { desktopSettings } from '../startos/fileModels/desktop.json'
+export { editorVersion } from '../startos/utils'

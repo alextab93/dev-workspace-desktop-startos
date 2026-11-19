@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+if [ -z "${CUSTOM_USER:-}" ] || [ -z "${PASSWORD:-}" ]; then
+  printf '%s\n' 'Set the desktop access password before starting the service.' >&2
+  exit 1
+fi
+
+if [ ! -x /config/.local/share/dev-workspace-desktop/editor/current/bin/code ]; then
+  printf '%s\n' 'Install desktop VS Code before starting the service.' >&2
+  exit 1
+fi
+
+exec /init "$@"
