@@ -24,16 +24,16 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -f /etc/ssl/private/ssl-cert-snakeoil.key /etc/ssl/certs/ssl-cert-snakeoil.pem
 
-COPY assets/install-editor.py assets/editor-releases.json /usr/local/lib/dev-workspace-desktop/
-COPY assets/workspace-connection.py assets/open-workspace.py /usr/local/lib/dev-workspace-desktop/
-COPY assets/keyring.py /usr/local/lib/dev-workspace-desktop/
-COPY assets/patch-selkies-keyboard.py /usr/local/lib/dev-workspace-desktop/
-COPY assets/connect-workspace.txt /usr/local/share/dev-workspace-desktop/connect-workspace.txt
-COPY assets/start-desktop /usr/local/bin/start-desktop
-COPY assets/code /usr/local/bin/code
-COPY assets/autostart /defaults/autostart
-COPY assets/autostart /defaults/autostart_wayland
-COPY assets/desktop-origin.conf /etc/nginx/desktop-origin.conf
+COPY --chmod=644 assets/install-editor.py assets/editor-releases.json /usr/local/lib/dev-workspace-desktop/
+COPY --chmod=644 assets/workspace-connection.py assets/open-workspace.py /usr/local/lib/dev-workspace-desktop/
+COPY --chmod=644 assets/keyring.py /usr/local/lib/dev-workspace-desktop/
+COPY --chmod=644 assets/patch-selkies-keyboard.py /usr/local/lib/dev-workspace-desktop/
+COPY --chmod=644 assets/connect-workspace.txt /usr/local/share/dev-workspace-desktop/connect-workspace.txt
+COPY --chmod=755 assets/start-desktop /usr/local/bin/start-desktop
+COPY --chmod=755 assets/code /usr/local/bin/code
+COPY --chmod=644 assets/autostart /defaults/autostart
+COPY --chmod=644 assets/autostart /defaults/autostart_wayland
+COPY --chmod=644 assets/desktop-origin.conf /etc/nginx/desktop-origin.conf
 RUN python3 -B /usr/local/lib/dev-workspace-desktop/patch-selkies-keyboard.py && \
     chmod 0755 /usr/local/bin/start-desktop /usr/local/bin/code && \
     sed -i '/^server {/a\  include /etc/nginx/desktop-origin.conf;' /defaults/default.conf

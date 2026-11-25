@@ -1,11 +1,11 @@
 import { IMPOSSIBLE, VersionInfo } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '0.1.0:10',
+  version: '0.1.0:11',
   releaseNotes: {
-    en_US: 'Document how browser viewport size affects the streamed desktop.',
+    en_US: 'Ensure the desktop user can read startup helpers on every build.',
     es_ES:
-      'Documenta cómo el tamaño de la ventana del navegador afecta al escritorio remoto.',
+      'Garantiza que el usuario del escritorio pueda leer los archivos de inicio.',
   },
   migrations: {
     up: async () => {},
